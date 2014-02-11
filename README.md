@@ -4,7 +4,23 @@ cf-node-hello-git
 An example of pushing a git repo of a node.js app to CloudFoundry, using
 [Jame's Bayer's scm-buildpack](https://groups.google.com/a/cloudfoundry.org/d/msg/vcap-dev/9eC_wNg2DPc/FcYDlrkeH7UJ).
 
-references:
+
+usage
+================================================================================
+
+run:
+
+    git clone https://github.com/pmuellr/cf-node-hello-git
+    cd cf-node-hello-git
+    <edit manifest.yml, change application `name` value>
+    cf push
+
+and behold your new hello world server is running!
+
+
+
+references
+================================================================================
 
 * <https://github.com/pmuellr/cf-node-hello.git> :
   git repo containing the app we want to push
@@ -66,6 +82,8 @@ This is the manifest for your application.
 
 Some notes:
 
+* `name` is the application name that's pushed.  **CHANGE IT!!**
+
 * `buildpack` points to a special buildpack that runs multiple buildpacks; in
   this case, the buildpacks specified in the `.buildpacks` file.
 
@@ -83,10 +101,3 @@ Some notes:
 
 This file!
 
-
-
-Using this thing
---------------------------------------------------------------------------------
-
-Please make sure you change the application name `cf-node-hello-blortz`
-to something else, since only one can exist in a CF installation.
