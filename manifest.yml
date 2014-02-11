@@ -1,0 +1,7 @@
+applications:
+- name: cf-node-hello-blortz
+  memory: 128M
+  buildpack: https://github.com/ddollar/heroku-buildpack-multi.git
+  path: .
+  env:
+     SCM_URL: https://github.com/pmuellr/cf-node-hello.git
